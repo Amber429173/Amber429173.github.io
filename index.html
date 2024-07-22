@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amber's Personal Web</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: #f0f0f0;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            padding: 2em;
+            box-sizing: border-box;
+            background-color: #f5f5f5; /* 更加質樸的背景顏色 */
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #home {
+            background-color: #1e90ff; /* 現代化的純色背景 */
+        }
+        #blue-world {
+            background-color: #00aaff; /* 現代化的純色背景 */
+        }
+        #next-journey {
+            background-color: #ff5722; /* 現代化的純色背景 */
+        }
+        #contact {
+            background-color: #4caf50; /* 現代化的純色背景 */
+        }
+        header, footer {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            z-index: 1000;
+        }
+        header {
+            top: 0;
+            animation: slideInDown 1s forwards;
+        }
+        footer {
+            bottom: 0;
+            animation: slideInUp 1s forwards;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 0;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        button {
+            padding: 1em 2em;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background: linear-gradient(145deg, #333, #555);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1em;
+        }
+        button:hover {
+            background: linear-gradient(145deg, #555, #333);
+            transform: scale(1.1);
+        }
+        h2, p {
+            color: #fff; /* 白色文字顯示在質樸背景上 */
+        }
+        @keyframes slideInDown {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInUp {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">HOME</a>
+            <div class="dropdown">
+                <a href="#">藍色世界</a>
+                <div class="dropdown-content">
+                    <a href="#maldives">馬爾地夫</a>
+                    <a href="#sipadan">西巴丹</a>
+                    <a href="#gili">藍夢島</a>
+                    <a href="#cebu">宿霧</a>
+                    <a href="#similan">斯米蘭</a>
+                    <a href="#four-kingdoms">四王群島</a>
+                </div>
+            </div>
+            <a href="#next-journey">下一個旅程</a>
+            <a href="#contact">聯繫我</a>
+        </nav>
+    </header>
+    <section id="home" class="section">
+        <h2>HOME</h2>
+        <p>你好，我是Amber。這是Chat GPT幫我寫的網頁。</p>
+        <button onclick="alert('Hello, Amber!')">按一下我</button>
+    </section>
+    <section id="blue-world" class="section">
+        <h2>藍色世界</h2>
+        <p>探索迷人的藍色世界，點擊下拉選單了解更多。</p>
+    </section>
+    <section id="next-journey" class="section">
+        <h2>下一個旅程</h2>
+        <p>計劃你下一次的旅行，探索新地方。</p>
+        <button onclick="alert('Planning your next journey!')">開始計劃</button>
+    </section>
+    <section id="contact" class="section">
+        <h2>聯繫我</h2>
+        <p>電子郵件：[你的電子郵件]</p>
+        <button onclick="alert('Get in touch with me!')">聯繫我</button>
+    </section>
+    <footer>
+        <p>版權所有 &copy; 2024 Amber</p>
+    </footer>
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
