@@ -3,7 +3,10 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background: #f0f0f0;
+    background: linear-gradient(135deg, #3A3B5A 0%, #5B6E7E 50%, #7D8B8C 100%);
+    min-height: 100vh; /* 确保背景颜色覆盖整个页面 */
+    padding-top: 40px; /* 留出header的高度 */
+    padding-bottom: 40px; /* 留出footer的高度 */
     color: #333;
 }
 
@@ -11,7 +14,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: calc(100vh - 160px); /* 确保 section 至少占据整个视口高度减去 header 和 footer */
     text-align: center;
     color: white;
     padding: 2em;
@@ -34,7 +37,11 @@ header, footer {
 
 header {
     top: 0;
-    animation: slideInDown 1s forwards;
+    transition: transform 0.3s ease;
+}
+
+header.hidden {
+    transform: translateY(-100%);
 }
 
 footer {
