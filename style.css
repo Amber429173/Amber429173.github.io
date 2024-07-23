@@ -38,6 +38,7 @@ header, footer {
 header {
     top: 0;
     transition: transform 0.3s ease;
+    animation: slideInDown 1s forwards;
 }
 
 header.hidden {
