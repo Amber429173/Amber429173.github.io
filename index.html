@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,26 +21,26 @@
             color: white;
             padding: 2em;
             box-sizing: border-box;
-            background-color: #f5f5f5; /* 更加質樸的背景顏色 */
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 1s ease-out, transform 1s ease-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         section.visible {
             opacity: 1;
             transform: translateY(0);
         }
         #home {
-            background-color: #1e90ff; /* 現代化的純色背景 */
+            background: linear-gradient(135deg, #0A3D62, #1B9CFC); /* 深藍到淺藍的漸變 */
         }
         #blue-world {
-            background-color: #00aaff; /* 現代化的純色背景 */
+            background: linear-gradient(135deg, #1B9CFC, #3B3B98); /* 淺藍到紫藍的漸變 */
         }
         #next-journey {
-            background-color: #ff5722; /* 現代化的純色背景 */
+            background: linear-gradient(135deg, #3B3B98, #4CAF50); /* 紫藍到綠色的漸變 */
         }
         #contact {
-            background-color: #4caf50; /* 現代化的純色背景 */
+            background: linear-gradient(135deg, #4CAF50, #0A3D62); /* 綠色到深藍的漸變 */
         }
         header, footer {
             position: fixed;
@@ -113,7 +113,13 @@
             background: linear-gradient(145deg, #555, #333);
             transform: scale(1.1);
         }
-        h2, p {
+        button:active {
+            transform: scale(0.9);
+        }
+        h2 {
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+        p {
             color: #fff; /* 白色文字顯示在質樸背景上 */
         }
         @keyframes slideInDown {
@@ -161,12 +167,12 @@
             <div class="dropdown">
                 <a href="#">藍色世界</a>
                 <div class="dropdown-content">
-                    <a href="#maldives">馬爾地夫</a>
-                    <a href="#sipadan">西巴丹</a>
-                    <a href="#gili">藍夢島</a>
-                    <a href="#cebu">宿霧</a>
-                    <a href="#similan">斯米蘭</a>
-                    <a href="#four-kingdoms">四王群島</a>
+                    <a href="maldives.html">馬爾地夫</a>
+                    <a href="sipadan.html">西巴丹</a>
+                    <a href="lembongan.html">藍夢島</a>
+                    <a href="cebu.html">宿霧</a>
+                    <a href="similan.html">斯米蘭</a>
+                    <a href="four-kingdoms.html">四王群島</a>
                 </div>
             </div>
             <a href="#next-journey">下一個旅程</a>
@@ -175,22 +181,21 @@
     </header>
     <section id="home" class="section">
         <h2>HOME</h2>
-        <p>你好，我是Amber。這是Chat GPT幫我寫的網頁。</p>
-        <button onclick="alert('Hello, Amber!')">按一下我</button>
+        <p>你好，我是Amber。這是Chat GPT幫我寫的網頁。這個網站中，我會分享一些我去過的潛水地點、照片，並且讓Chat GPT練習怎麼寫出我要的網站。</p>
     </section>
     <section id="blue-world" class="section">
         <h2>藍色世界</h2>
-        <p>探索迷人的藍色世界，點擊下拉選單了解更多。</p>
+        <p>探索迷人的藍色世界，關於我去過的內太空。</p>
     </section>
     <section id="next-journey" class="section">
         <h2>下一個旅程</h2>
-        <p>計劃你下一次的旅行，探索新地方。</p>
-        <button onclick="alert('Planning your next journey!')">開始計劃</button>
+        <p>我的下一次的旅行，探索新地方。</p>
+        <a href="next-journey.html"><button>了解更多</button></a>
     </section>
     <section id="contact" class="section">
         <h2>聯繫我</h2>
-        <p>電子郵件：[你的電子郵件]</p>
-        <button onclick="alert('Get in touch with me!')">聯繫我</button>
+        <p>EMAIL：Jingyi0081210@gmail.com</p>
+        <a href="mailto:Jingyi0081210@gmail.com"><button>聯繫我</button></a>
     </section>
     <footer>
         <p>版權所有 &copy; 2024 Amber</p>
