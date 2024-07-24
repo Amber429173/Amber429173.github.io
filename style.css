@@ -12,7 +12,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px); /* 确保 section 至少占据整个视口高度减去 header 和 footer */
+    min-height: calc(100vh - 80px); /* 确保 section 至少占据整个视口高度减去1 header 和 footer */
     text-align: center;
     color: white;
     padding: 2em;
