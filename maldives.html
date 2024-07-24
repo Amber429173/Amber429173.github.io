@@ -4,14 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>馬爾地夫 - Amber's Personal Web</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #5a4b66, #7b6c89); /* 莫蘭迪紫灰漸層顏色再加深 */
+            color: white;
+            padding-top: 80px; /* 留出 header 高度 */
+            padding-bottom: 80px; /* 留出 footer 高度 */
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            text-align: left;
             padding: 2em;
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
             text-align: center;
-            color: #fff;
+            padding: 1em 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        button {
+            padding: 1em 2em;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background: linear-gradient(145deg, #333, #555);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background: linear-gradient(145deg, #555, #333);
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        h2 {
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
@@ -28,22 +108,47 @@
             <a href="next-journey.html">下一個旅程</a>
         </nav>
     </header>
-    <section style="background: linear-gradient(135deg, #3A3B5A 0%, #5B6E7E 50%, #7D8B8C 100%);">
-        <div class="content">
-            <h2>馬爾地夫潛水探險</h2>
-            <p>馬爾地夫是世界上最受歡迎的潛水目的地之一，擁有晶瑩剔透的海水和豐富的海洋生物。</p>
-            <p>在這裡，你可以看到壯觀的珊瑚礁、各式各樣的熱帶魚，甚至還有機會遇見鯊魚和鯨鯊。</p>
-            <h3>推薦潛水地點：</h3>
-            <ul>
-                <li>班度斯環礁：以其色彩斑斕的珊瑚礁和豐富的海洋生物而著名。</li>
-                <li>蘇利環礁：這裡擁有大批的鯨鯊和鯊魚，是潛水愛好者的理想之地。</li>
-                <li>維拉環礁：這裡的海底景觀多樣，適合所有潛水等級的潛水者。</li>
-            </ul>
-            <p>馬爾地夫的潛水活動非常受歡迎，因此建議提前預訂潛水行程，以確保您能夠體驗到最好的潛水地點。</p>
-        </div>
+	<section>
+       	 <h2>馬爾地夫</h2>
+      	 <p>馬爾地夫（Maldives）是一個由26個環礁組成的群島國家，位於印度洋的西南部，以其絕美的白沙灘、清澈的藍色海水和豐富的海洋生物聞名。這裡擁有眾多的度假村和水上別墅，提供奢華的住宿體驗。馬爾地夫的珊瑚礁系統被譽為世界上最美麗的之一，吸引著大量潛水和浮潛愛好者前來探索。</p>
+    </section>
+    <section>
+        <h3>交通方式</h3>
+        <p>前往馬爾地夫的主要交通方式是搭乘國際航班抵達馬累國際機場（Malé International Airport）。從機場到各個度假村和島嶼，通常需要搭乘水上飛機、快艇或內陸航班。根據度假村的位置和距離，交通安排可能會有所不同。建議提前聯繫度假村，了解詳細的交通安排和預訂服務。</p>
+    </section>
+    <section>
+        <h3>潛水旅遊</h3>
+        <p>馬爾地夫擁有眾多優質的潛水地點，包括著名的「阿里環礁」（Ari Atoll）和「拉克瑪環礁」（Raa Atoll）。這些地點以其豐富的海洋生物、多樣的珊瑚礁和出色的水下能見度而聞名。在馬爾地夫潛水，您可以觀察到各種魚類、海龜、鯊魚以及大型的鯨鯊。潛水中心通常提供專業的潛水導遊服務，確保您能安全地享受這些美麗的水下世界。</p>
+    </section>
+    <section>
+        <h3>費用</h3>
+        <p>馬爾地夫的潛水旅遊費用視季節、行程長短以及服務內容而異。一般而言，一次馬爾地夫的潛水之旅可能需要每人約$150至$400美元，這通常包括船票、潛水裝備租賃、潛水導遊服務和午餐。馬爾地夫的住宿和交通費用也可能較高，特別是在高峰季節。建議提前預訂並查詢詳細的費用信息，以便合理安排預算。</p>
     </section>
     <footer>
         <p>版權所有 &copy; 2024 Amber</p>
     </footer>
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        const scrollThreshold = 100;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScrollTop <= 0) {
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            } else if (currentScrollTop > lastScrollTop && currentScrollTop > scrollThreshold) {
+                header.style.transform = 'translateY(-100%)';
+                footer.style.transform = 'translateY(100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        });
+    </script>
 </body>
 </html>
