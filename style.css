@@ -4,10 +4,8 @@ body {
     padding: 0;
     scroll-behavior: smooth;
     background: linear-gradient(135deg, #3A3B5A 0%, #5B6E7E 50%, #7D8B8C 100%);
-    min-height: 100vh; /* 确保背景颜色覆盖整个页面 */
+    min-height: 100vh;
     color: #333;
-    padding-top: 40px; /* 留出header的高度 */
-    padding-bottom: 40px; /* 留出footer的高度 */
 }
 
 section {
@@ -19,8 +17,8 @@ section {
     color: white;
     padding: 2em;
     box-sizing: border-box;
-    opacity: 1; /* 默认显示，不使用 .visible 类 */
-    transform: translateY(0); /* 默认位置 */
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 1s ease-out, transform 1s ease-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -130,5 +128,8 @@ p {
 @media screen and (max-width: 768px) {
     .content {
         padding: 1em; /* 调整手机端的左右边距 */
+    }
+    header, footer {
+        padding: 0.5em 0;
     }
 }
