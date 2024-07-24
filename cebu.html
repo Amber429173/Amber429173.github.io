@@ -14,6 +14,8 @@
             color: white;
             padding-top: 80px; /* 留出 header 高度 */
             padding-bottom: 80px; /* 留出 footer 高度 */
+            overflow-x: hidden; /* 防止水平滚动 */
+            position: relative; /* 允许绝对定位的子元素 */
         }
 
         section {
@@ -93,6 +95,33 @@
                 font-size: 0.8em;
             }
         }
+
+        .star-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* 使星星层不可点击 */
+            overflow: hidden;
+            z-index: -1; /* 确保星星在内容下方 */
+        }
+
+        .star {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            width: 2px;
+            height: 2px;
+            opacity: 0;
+            animation: star-flicker 3s infinite; /* 修改动画时长 */
+        }
+
+        @keyframes star-flicker {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
     </style>
 </head>
 <body>
@@ -108,9 +137,9 @@
             <a href="next-journey.html">下一個旅程</a>
         </nav>
     </header>
-	<section>
-       	 <h2>宿霧潛水探險</h2>
-      	 <p>宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁。</p>
+    <section>
+        <h2>宿霧潛水探險</h2>
+        <p>宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁。</p>
     </section>
     <section>
         <h3>交通方式</h3>
@@ -127,7 +156,30 @@
     <footer>
         <p>版權所有 &copy; 2024 Amber</p>
     </footer>
+    <div class="star-container"></div>
     <script>
+        // Generate stars dynamically
+        const starContainer = document.querySelector('.star-container');
+        const numberOfStars = 100;
+
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            const size = Math.random() * 3 + 1; // Random size between 1 and 4px
+            const xPos = Math.random() * 100; // Random position in percentage
+            const yPos = Math.random() * 100; // Random position in percentage
+            const duration = Math.random() * 3 + 2; // Random animation duration between 2s and 5s
+
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.left = xPos + '%';
+            star.style.top = yPos + '%';
+            star.style.animationDuration = duration + 's';
+
+            starContainer.appendChild(star);
+        }
+
+        // Header and footer hide on scroll
         let lastScrollTop = 0;
         const header = document.querySelector('header');
         const footer = document.querySelector('footer');
