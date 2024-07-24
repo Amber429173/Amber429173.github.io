@@ -3,8 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST - Amber's Personal Web</title>
-    <link rel="stylesheet" href="style.css">
+    <title>宿霧 - Amber's Personal Web</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #000428, #004e92); /* 星空色漸層 */
+            color: white;
+            padding-top: 80px; /* 留出 header 高度 */
+            padding-bottom: 80px; /* 留出 footer 高度 */
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        button {
+            padding: 1em 2em;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background: linear-gradient(145deg, #333, #555);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background: linear-gradient(145deg, #555, #333);
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        h2 {
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 0.8em;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,19 +108,18 @@
             <a href="next-journey.html">下一個旅程</a>
         </nav>
     </header>
-    <section style="background: linear-gradient(135deg, #3A3B5A 0%, #5B6E7E 50%, #7D8B8C 100%);">
-        <div class="content">
-            <h2>馬爾地夫潛水探險</h2>
-            <p>馬爾地夫是世界上最受歡迎的潛水目的地之一，擁有晶瑩剔透的海水和豐富的海洋生物。</p>
-            <p>在這裡，你可以看到壯觀的珊瑚礁、各式各樣的熱帶魚，甚至還有機會遇見鯊魚和鯨鯊。</p>
-            <h3>推薦潛水地點：</h3>
-            <ul>
-                <li>班度斯環礁：以其色彩斑斕的珊瑚礁和豐富的海洋生物而著名。</li>
-                <li>蘇利環礁：這裡擁有大批的鯨鯊和鯊魚，是潛水愛好者的理想之地。</li>
-                <li>維拉環礁：這裡的海底景觀多樣，適合所有潛水等級的潛水者。</li>
-            </ul>
-            <p>馬爾地夫的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點的潛水活動非常受歡迎，因此建議提前預潛水行程，以確保您能夠體驗到最好的潛水地點驗到最好的潛水地點最好的潛水地點。</p>
-        </div>
+    <section>
+        <h2>宿霧潛水探險</h2>
+        <p>宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁宿霧是潛水愛好者的天堂，擁有豐富的海洋生物和壯觀的珊瑚礁。</p>
+        <p>在這裡，你可以看到海龜、鯨鯊、以及色彩斑斕的熱帶魚。</p>
+    </section>
+    <section>
+        <h3>推薦潛水地點：</h3>
+        <ul>
+            <li>摩爾博爾：著名的沙丁魚風暴，成千上萬的沙丁魚在這裡聚集。</li>
+            <li>奧斯洛布：與鯨鯊共游，近距離接觸這些溫和的巨人。</li>
+            <li>巴里卡薩：擁有豐富的海洋生物和壯麗的珊瑚牆。</li>
+        </ul>
     </section>
     <footer>
         <p>版權所有 &copy; 2024 Amber</p>
@@ -41,33 +129,22 @@
         const header = document.querySelector('header');
         const footer = document.querySelector('footer');
         const scrollThreshold = 100;
-        let scrollTimeout;
 
         window.addEventListener('scroll', () => {
             const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (currentScrollTop > lastScrollTop && currentScrollTop > scrollThreshold) {
-                header.classList.add('hidden');
-                footer.classList.add('hidden');
+            if (currentScrollTop <= 0) {
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            } else if (currentScrollTop > lastScrollTop && currentScrollTop > scrollThreshold) {
+                header.style.transform = 'translateY(-100%)';
+                footer.style.transform = 'translateY(100%)';
             } else {
-                header.classList.remove('hidden');
-                footer.classList.remove('hidden');
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
             }
 
             lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-
-            // Clear the previous timeout if the user scrolls again
-            if (scrollTimeout) {
-                clearTimeout(scrollTimeout);
-            }
-
-            // Set a timeout to hide the header and footer after 1 second of inactivity
-            scrollTimeout = setTimeout(() => {
-                if (currentScrollTop > 0) {
-                    header.classList.add('hidden');
-                    footer.classList.add('hidden');
-                }
-            }, 1000);
         });
     </script>
 </body>
