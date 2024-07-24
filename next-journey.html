@@ -14,6 +14,7 @@
             color: white;
             padding-top: 80px; /* 留出 header 高度 */
             padding-bottom: 80px; /* 留出 footer 高度 */
+            background-attachment: fixed; /* 視差效果 */
         }
 
         section {
@@ -25,6 +26,12 @@
             text-align: center;
             padding: 2em;
             box-sizing: border-box;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         header, footer {
@@ -86,6 +93,19 @@
 
         h2 {
             font-family: 'Arial Black', Gadget, sans-serif;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-top: 20px;
+            animation: fadeInText 2s ease-in-out;
         }
 
         @media (max-width: 768px) {
