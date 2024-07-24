@@ -15,6 +15,7 @@
         section {
             display: flex;
             justify-content: center;
+	    flex-direction: column;
             align-items: center;
             height: 100vh;
             text-align: center;
@@ -120,7 +121,7 @@
             font-family: 'Arial Black', Gadget, sans-serif;
         }
         p {
-            color: #fff; /* 質樸背景上 */
+            color: #fff; /* 白色文字顯示在質樸背景上 */
         }
         @keyframes slideInDown {
             0% {
@@ -180,20 +181,20 @@
         </nav>
     </header>
     <section id="home" class="section">
-        <h2>HOME</h2>
+        <h2>HOME</h2><br>
         <p>你好，我是Amber。這是Chat GPT幫我寫的網頁。這個網站中，我會分享一些我去過的潛水地點、照片，並且讓Chat GPT練習怎麼寫出我要的網站。</p>
     </section>
     <section id="blue-world" class="section">
-        <h2>藍色世界</h2>
+        <h2>藍色世界</h2><br>
         <p>探索迷人的藍色世界，關於我去過的內太空。</p>
     </section>
     <section id="next-journey" class="section">
-        <h2>下一個旅程</h2>
+        <h2>下一個旅程</h2><br>
         <p>我的下一次的旅行，探索新地方。</p>
         <a href="next-journey.html"><button>了解更多</button></a>
     </section>
     <section id="contact" class="section">
-        <h2>聯繫我</h2>
+        <h2>聯繫我</h2><br>
         <p>EMAIL：Jingyi0081210@gmail.com</p>
         <a href="mailto:Jingyi0081210@gmail.com"><button>聯繫我</button></a>
     </section>
@@ -214,5 +215,6 @@
             observer.observe(section);
         });
     </script>
+
 </body>
 </html>
