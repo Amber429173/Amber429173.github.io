@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藍夢島 - Amber's Personal Web</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #6e6259, #8c7f76); /* 莫蘭迪棕灰漸層 */
+            color: white;
+            padding-top: 80px; /* 留出 header 高度 */
+            padding-bottom: 80px; /* 留出 footer 高度 */
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            text-align: left;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        button {
+            padding: 1em 2em;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background: linear-gradient(145deg, #333, #555);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background: linear-gradient(145deg, #555, #333);
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        h2 {
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="maldives.html">馬爾地夫</a>
+            <a href="sipadan.html">西巴丹</a>
+            <a href="lembongan.html">藍夢島</a>
+            <a href="cebu.html">宿霧</a>
+            <a href="similan.html">斯米蘭</a>
+            <a href="four-kingdoms.html">四王群島</a>
+            <a href="next-journey.html">下一個旅程</a>
+        </nav>
+    </header>
+	<section>
+       	 <h2>印尼藍夢島</h2>
+      	 <p>藍夢島（Nusa Lembongan）是位於印尼峇厘島東南部的一個小島，以其美麗的海灘、清澈的海水和悠閒的氛圍而著名。這裡是度假勝地，適合放鬆、潛水和體驗當地文化。藍夢島以其壯觀的珊瑚礁和豐富的海洋生物吸引了眾多潛水和浮潛愛好者。</p>
+    </section>
+    <section>
+        <h3>交通方式</h3>
+        <p>前往藍夢島的主要交通方式是從峇厘島乘船。從峇厘島的沙努爾（Sanur）港口出發，有多家快艇公司提供定期渡輪服務，通常需要約30至45分鐘的船程。建議提前預訂船票，特別是在旅遊旺季，以確保有座位。此外，也可以從峇厘島的其他港口如Padang Bai或Serangan前往藍夢島。</p>
+    </section>
+    <section>
+        <h3>潛水旅遊</h3>
+        <p>藍夢島是潛水愛好者的天堂，擁有多個世界級的潛水點，如「藍角」（Blue Corner）和「魔鬼的眼淚」（Devil's Tears）。這些地點以其豐富的海洋生物、多樣的珊瑚礁和出色的水下能見度而聞名。在這裡潛水，您可能會看到海龜、礁鯊、巨大的魔鬼魚（Manta Rays）和色彩斑斕的熱帶魚群。當地的潛水中心提供專業的潛水導遊服務和設備租賃，確保您能安全且愉快地享受水下世界。</p>
+    </section>
+    <section>
+        <h3>費用</h3>
+        <p>藍夢島的潛水旅遊費用取決於季節、行程長短和服務內容。通常，每次潛水的費用大約在$30至$100美元之間，這通常包括船票、潛水裝備租賃和潛水導遊服務。除了潛水費用外，藍夢島的住宿和餐飲費用相對峇厘島主島來說也較為便宜。建議提前查詢並預訂，尤其是在旅遊旺季，這樣可以獲得更好的價格和服務。</p>
+    </section>
+    <footer>
+        <p>版權所有 &copy; 2024 Amber</p>
+    </footer>
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        const scrollThreshold = 100;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScrollTop <= 0) {
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            } else if (currentScrollTop > lastScrollTop && currentScrollTop > scrollThreshold) {
+                header.style.transform = 'translateY(-100%)';
+                footer.style.transform = 'translateY(100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        });
+    </script>
+</body>
+</html>

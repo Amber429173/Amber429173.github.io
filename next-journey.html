@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下一個旅程 - Amber's Personal Web</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #3a0c3a, #820a46); /* 紅酒漸層 */
+            color: white;
+            padding-top: 80px; /* 留出 header 高度 */
+            padding-bottom: 80px; /* 留出 footer 高度 */
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        button {
+            padding: 1em 2em;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background: linear-gradient(145deg, #333, #555);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background: linear-gradient(145deg, #555, #333);
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        h2 {
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="maldives.html">馬爾地夫</a>
+            <a href="sipadan.html">西巴丹</a>
+            <a href="lembongan.html">藍夢島</a>
+            <a href="cebu.html">宿霧</a>
+            <a href="similan.html">斯米蘭</a>
+            <a href="four-kingdoms.html">四王群島</a>
+            <a href="next-journey.html">下一個旅程</a>
+        </nav>
+    </header>
+	<section>
+       	 <h2>下一個旅程</h2>
+      	 <p>未完待續</p>
+        </section>
+        <footer>
+        <p>版權所有 &copy; 2024 Amber</p>
+    </footer>
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        const scrollThreshold = 100;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScrollTop <= 0) {
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            } else if (currentScrollTop > lastScrollTop && currentScrollTop > scrollThreshold) {
+                header.style.transform = 'translateY(-100%)';
+                footer.style.transform = 'translateY(100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        });
+    </script>
+</body>
+</html>
