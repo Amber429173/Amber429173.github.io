@@ -255,10 +255,11 @@ p {
         padding: 0.5em;
     }
 }
-        @media (max-width: 480px) {
-            .blue-world-buttons {
-                grid-template-columns: repeat(1, 1fr);
-            }    }  @media (max-width: 768px) {
+ @media (max-width: 320px) {
+    .blue-world-buttons {
+     grid-template-columns: repeat(1, 1fr);
+            }    }  
+@media (max-width: 768px) {
     .blue-world-buttons {
         /* 在螢幕寬度小於768px時按鈕排列成兩列 */
         display: grid;
@@ -273,9 +274,9 @@ p {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .blue-world-buttons {
-        /* 在螢幕寬度小於480px時按鈕排列成一列 */
+        /* 在螢幕寬度小於320px時按鈕排列成一列 */
         grid-template-columns: 1fr;
     }
 }    
