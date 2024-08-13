@@ -10,11 +10,11 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
-            background: linear-gradient(135deg, #3a0c3a, #820a46); /* 紅酒漸層 */
+            background: linear-gradient(135deg, #3a0c3a, #820a46);
             color: white;
-            padding-top: 80px; /* 留出 header 高度 */
-            padding-bottom: 80px; /* 留出 footer 高度 */
-            background-attachment: fixed; /* 視差效果 */
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background-attachment: fixed;
         }
 
         section {
@@ -27,6 +27,10 @@
             padding: 2em;
             box-sizing: border-box;
             animation: slideUp 1s ease-in-out;
+        }
+
+        .journey-section {
+            margin-top: 40px;
         }
 
         @keyframes slideUp {
@@ -71,24 +75,27 @@
             transform: scale(1.1);
         }
 
-        button {
-            padding: 1em 2em;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            background: linear-gradient(145deg, #333, #555);
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-            font-size: 1em;
+        .journey-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
-        button:hover {
-            background: linear-gradient(145deg, #555, #333);
-            transform: scale(1.1);
+        .journey-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(33.333% - 40px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-width: 280px;
+            max-width: 300px;
         }
 
-        button:active {
-            transform: scale(0.9);
+        .journey-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
@@ -130,9 +137,24 @@
     </header>
 	<section>
        	 <h2>下一個旅程</h2>
-      	 <p>未完待續</p>
-        </section>
-        <footer>
+      	 <p>不是在潛水，就是在潛水的路上......或是賺取潛水費用中。</p>
+         
+         <div class="journey-container">
+             <div class="journey-box">
+                 <h3>科莫多 Komodo</h3>
+                 <p>2024.10。</p>
+                 <p>5天4夜，兩個潛水日6潛、一天陸地遊。</p>
+                 <p>預算：25,000</p>
+             </div>
+             <div class="journey-box">
+                 <h3>圖巴塔哈 Tubbataha</h3>
+                 <p>2025.04。</p>
+                 <p>7天6夜，五個潛水日18潛。</p>
+                 <p>預算：95,000</p>
+             </div>
+         </div>
+    </section>
+    <footer>
         <p>版權所有 &copy; 2024 Amber</p>
     </footer>
     <script>
