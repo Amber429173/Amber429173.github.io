@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科莫多 - Amber's Personal Web</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #A1C2D8, #F0E68C, #0A9ED3); /* 莫蘭迪湖水綠漸層 */
+            color: #4E3B31;
+            padding-top: 80px; /* 留出 header 高度 */
+            padding-bottom: 80px; /* 留出 footer 高度 */
+        }
+        img {
+            max-width: 100%; /* 使圖片不會超過其容器的寬度 */
+            height: auto; /* 保持圖片的原始比例 */
+        }
+        .custom-img {
+            width: 600px; /* 可以根據需要調整 */
+            height: auto;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            text-align: left;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin: 1em;
+        }
+        .content .text {
+            max-width: 50%;
+            margin: 1em;
+        }
+        .reverse {
+            flex-direction: row-reverse;
+        }
+        .reverse .text {
+            margin-left: 1em;
+            margin-right: 0;
+        }
+        .reverse img {
+            margin-left: 0;
+            margin-right: 1em;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        header, footer {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        button {
+            padding: 1em 2em;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background: linear-gradient(145deg, #333, #555);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background: linear-gradient(145deg, #555, #333);
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        h2 {
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            .content .text, .content img {
+                max-width: 100%;
+                margin: 0.5em;
+            }
+            header {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="maldives.html">馬爾地夫</a>
+            <a href="sipadan.html">西巴丹</a>
+            <a href="lembongan.html">藍夢島</a>
+            <a href="cebu.html">宿霧</a>
+            <a href="similan.html">斯米蘭</a>
+            <a href="four-kingdoms.html">四王群島</a>
+            <a href="komodo.html">科莫多</a>
+	    <a href="tubbataha.html">圖巴塔哈</a>
+            <a href="next-journey.html">下一個旅程</a>
+        </nav>
+    </header>
+	<section>
+        <div class="content">
+            <div class="text">
+        	 <h2>圖巴塔哈</h2>
+                 <p>2025/3/9-15，前往菲律賓Tubbataha參加7天六夜船宿，5個潛水天。船家是Narayana。</p>
+                       </div>
+          <!--<div class="slideshow-container">
+             <img src="https://imgur.com/JL2qceA.jpg" alt="Mari" class="custom-img">
+        </div>-->
+          </div>
+    </section>
+    <section>
+        <div class="content">
+            <div class="text">
+        <h2>交通方式</h2>
+	<h3>去程</h3>
+        <p>MNL→PPS。菲律賓航空。</p>
+        <p>抵達後對方會在PPS機場接機。</p>
+        <p>早上抵達，中午去港口餐廳發呆，直到下午2點一起上船。</p>
+        <h3>回程</h3>
+        <p>早上9點check out，搭乘菲律賓航空11:50返回馬尼拉第二航廈。</p>
+        <p>全程都搭乘菲航：抵達馬尼拉T1之後，需要重新領取行李，然後在行李轉盤區直接右轉，把行李給櫃檯人員，再來就可以掃海關申報碼、出航廈右轉搭乘接駁車去T2。</p>
+        <p>回程行李直掛，但是在行李轉盤區先不要出去；下手扶梯右手邊，菲航會有一個安檢口，那邊可以搭乘接駁車去T1。</p>
+        <p>*我按照去程的模式，直接走到航廈外去搭接駁車，結果被拒絕，工作人員看了我的登機證，叫我回去行李管制區去搭菲航的接駁車。</p>
+             </div>
+              <!--<div class="slideshow-container">
+             <img src="https://imgur.com/GfXjn90.jpg" alt="Port" class="custom-img">
+             </div>-->
+	</div>
+    </section>
+    <section>
+        <div class="content reverse">
+            <div class="text">
+        <h2>潛水旅遊</h2>
+	<h3>潛水行程</h3>
+        <p>7天17潛，因為第一天引擎故障，晚到Tubbataha，只有潛水2隻。</p>
+        <p>之後每個潛水天分別4、4、4、3潛。</p>
+        <p>潛水船共14人，分為2組。船上蠻擠的，有SunDesk可以睡覺，風很大。</p>
+        <p>這是潛季的開始，海上都沒看到其他船，在海下也是獨享整片大海。</p>
+        <p>四五月是旺季，海會比較平，流也較少、水較溫暖、也較容易有鯨鯊來岸邊覓食，到時海面上會有十幾艘船。</p>
+	<h3>潛水體驗</h3>
+        <p>有流、水溫26-29度，很多鯊魚。因為水下都沒有其他潛客打擾，因此可以直觀一堆鯊魚在睡覺。</p>
+        <p>有看到垂頭鯊魚、虎鯊、白鰭黑鰭、灰礁鯊、一直睡覺的護士鯊、manta、eagle ray、sting ray、marble ray、豆丁海馬、隆頭鸚哥、海狼群、傑克群...等等，可以說只差鯨鯊就圓滿了。</p>
+             </div>
+             <!--<div class="slideshow-container">
+                <div class="slides">
+                    <img src="https://imgur.com/Fjl9xQx.jpg" alt="day" class="custom-img">
+                </div>
+                <div class="slides">
+                    <img src="https://imgur.com/fnKgkIS.jpg" alt="night" class="custom-img">
+                </div>
+                <div class="slides">
+                    <img src="https://imgur.com/6ROZwj7.jpg" alt="seaisland" class="custom-img">
+                </div>
+              <div class="slides">
+                    <img src="https://imgur.com/KxXkETO.jpg" alt="batfish" class="custom-img">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+             </div>-->
+          </div>
+    </section>
+    <section>
+        <h2>費用</h2>
+        <h3>主要費用</h3>
+        <p>1. 船費（含潛水、住宿）：1345 USD +300 (跨國轉帳手續費收了$45 + 300...)。</p>
+        <p>2. 機票：8500。</p>
+        <p>3. 國家公園費：5000 peso。</p>
+        <p>4. 環境稅：200 peso。</p>
+        <p>5. 船上wifi：20 USD。</p>
+        <p>6. 小費：5000 peso。</p>
+        <p>7. 菲律賓簽證：1500。</p>
+        <p>8. 個人保險：1300。</p>
+        <p>9. 電話卡7天1G：160。</p>
+        <p>10.其餘雜支：吃飯買東西等。</p>
+
+        <p>總費用63000元。</p>
+            </section>
+    <footer>
+        <p>版權所有 &copy; 2024 Amber</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 4000); // 更改圖片間隔時間（以毫秒為單位）
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        const scrollThreshold = 100;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScrollTop <= 0) {
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            } else if (currentScrollTop > lastScrollTop && currentScrollTop > scrollThreshold) {
+                header.style.transform = 'translateY(-100%)';
+                footer.style.transform = 'translateY(100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        });
+    </script>
+</body>
+</html>
