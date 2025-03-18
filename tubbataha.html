@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>科莫多 - Amber's Personal Web</title>
+    <title>圖巴塔哈 - Amber's Personal Web</title>
     <style>
         body {
             font-family: 'Microsoft JhengHei', Arial, sans-serif;
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
-            background: linear-gradient(135deg, #A1C2D8, #F0E68C, #0A9ED3); /* 莫蘭迪湖水綠漸層 */
+	    background: linear-gradient(135deg,  
+      	    #6DD5FA, /* 淺藍 - 海洋色 */  
+ 	    rgba(255, 255, 255, 0.6), /* 銀色流光效果 */  
+  	    #84FAB0, /* 薄荷綠 - 透明感 */  
+  	    rgba(255, 215, 0, 0.5), /* 金色流光 */  
+  	    #FFFFFF /* 白色高光，模擬波光粼粼 */
+	    );
+	@keyframes shimmer {
+   	 0% { background-position: 0% 50%; }
+ 	   50% { background-position: 100% 50%; }
+	    100% { background-position: 0% 50%; }
+	}
+
+	background-size: 200% 200%;
+	animation: shimmer 6s infinite linear;
+
             color: #4E3B31;
             padding-top: 80px; /* 留出 header 高度 */
             padding-bottom: 80px; /* 留出 footer 高度 */
